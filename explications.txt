@@ -1,0 +1,2 @@
+Le programme est réaliser en python. Il faut donc posséder python afin de pouvoir le lancer. 
+Merci. 
