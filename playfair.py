@@ -109,10 +109,7 @@ def dechiffrer(mat) :
 				if (mat[i][j]==crypted[w][1]):
 					index[w][2]=i
 					index[w][3]=j
-	print("index : ", index)
-
-
-	for i in range (len(index)):
+		for i in range (len(index)):
 		if (index[i][0]==index[i][2]): 
 			print("meme lignes")
 			if (index[i][1]!=0 and index[i][3] !=0):
@@ -127,24 +124,20 @@ def dechiffrer(mat) :
 			line=index[i][0]
 			decrypted.append(mat[line][newcol1])
 			decrypted.append(mat[line][newcol2])
-			
 		elif (index[i][1]==index[i][3]): 
 			print("meme colone")
 			if (index[i][0]!=0 and index[i][2] !=0):
 				newline1=index[i][0]-1
 				newline2=index[i][2]-1
-
 			if(index[i][0]==0):
 				newline1=4
 				newline2=index[i][2]-1
 			if(index[i][2]==0):
 				newline1=index[i][0]-1
 				newline2=4
-
 			colone=index[i][1]
 			decrypted.append(mat[newline1][colone])
 			decrypted.append(mat[newline2][colone])
-
 		else : 
 			newline1=index[i][0]
 			newline2=index[i][2]
@@ -152,7 +145,6 @@ def dechiffrer(mat) :
 			col2=index[i][1]
 			decrypted.append(mat[newline1][col1])
 			decrypted.append(mat[newline2][col2])
-
 	affichage(decrypted)
 
 
@@ -207,7 +199,6 @@ def init() :
 			mat=[["B","Y","D","G","Z"],["J","S","F","U","P"],["L","A","R","K","X"],["C","O","I","V","E"],["Q","N","M","H","T"]]
 			dechiffrer(mat)
 			init()
-
 	elif (mode=='3'): 
 		sys.exit(0)
 	else : 
